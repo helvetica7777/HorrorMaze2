@@ -8,12 +8,17 @@ public class GhostGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(ghost, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Instantiate(ghost, new Vector3(14f, 0.8f, 0), Quaternion.identity);
+        Instantiate(ghost, new Vector3(-14f, 0.8f, 0), Quaternion.identity);
+        Instantiate(ghost, new Vector3(0, 0.8f, 14f), Quaternion.identity);
     }
 }
