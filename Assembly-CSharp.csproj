@@ -63,12 +63,14 @@
      <Compile Include="Assets\First person controller\Components\Zoom.cs" />
      <Compile Include="Assets\First person controller\FirstPersonLook.cs" />
      <Compile Include="Assets\First person controller\FirstPersonMovement.cs" />
+     <Compile Include="Assets\MonsterRange.cs" />
      <Compile Include="Assets\MouseCamLook.cs" />
      <Compile Include="Assets\Scripts\AgentWalkScript.cs" />
      <Compile Include="Assets\Scripts\DoorStatus.cs" />
      <Compile Include="Assets\Scripts\GhostGenerator.cs" />
-     <Compile Include="Assets\Scripts\MonsterRange.cs" />
      <Compile Include="Assets\Scripts\OpenDoors.cs" />
+     <Compile Include="Assets\Scripts\QTEController.cs" />
+     <Compile Include="Assets\Scripts\QTERange.cs" />
  <Reference Include="UnityEngine">
  <HintPath>E:/Program Files (x86)/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -598,31 +600,31 @@
  <HintPath>E:/Program Files (x86)/2019.4.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Unity Projects/Maze2/Nav_Path/Assets/Nav_Path/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>D:/Unity Projects/Nav_Path/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Unity Projects/Maze2/Nav_Path/Assets/Nav_Path/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>D:/Unity Projects/Nav_Path/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Unity Projects/Maze2/Nav_Path/Assets/Nav_Path/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/Unity Projects/Nav_Path/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity Projects/Maze2/Nav_Path/Assets/Nav_Path/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity Projects/Nav_Path/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>D:/Unity Projects/Maze2/Nav_Path/Assets/Nav_Path/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>D:/Unity Projects/Nav_Path/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/Unity Projects/Maze2/Nav_Path/Assets/Nav_Path/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/Unity Projects/Nav_Path/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Unity Projects/Maze2/Nav_Path/Assets/Nav_Path/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>D:/Unity Projects/Nav_Path/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Unity Projects/Maze2/Nav_Path/Assets/Nav_Path/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/Unity Projects/Nav_Path/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity Projects/Maze2/Nav_Path/Assets/Nav_Path/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Unity Projects/Nav_Path/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
