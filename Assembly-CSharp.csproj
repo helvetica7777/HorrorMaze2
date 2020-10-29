@@ -71,12 +71,14 @@
     <Compile Include="Assets\First person controller\Components\Zoom.cs" />
     <Compile Include="Assets\First person controller\FirstPersonLook.cs" />
     <Compile Include="Assets\First person controller\FirstPersonMovement.cs" />
+    <Compile Include="Assets\MonsterRange.cs" />
     <Compile Include="Assets\MouseCamLook.cs" />
     <Compile Include="Assets\Scripts\AgentWalkScript.cs" />
     <Compile Include="Assets\Scripts\DoorStatus.cs" />
     <Compile Include="Assets\Scripts\GhostGenerator.cs" />
-    <Compile Include="Assets\Scripts\MonsterRange.cs" />
     <Compile Include="Assets\Scripts\OpenDoors.cs" />
+    <Compile Include="Assets\Scripts\QTEController.cs" />
+    <Compile Include="Assets\Scripts\QTERange.cs" />
     <Compile Include="Assets\ghostBehavior.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/UnityProgram/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
