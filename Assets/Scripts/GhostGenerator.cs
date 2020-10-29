@@ -17,8 +17,12 @@ public class GhostGenerator : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Instantiate(ghost, new Vector3(14f, 0.8f, 0), Quaternion.identity);
-        Instantiate(ghost, new Vector3(-14f, 0.8f, 0), Quaternion.identity);
-        Instantiate(ghost, new Vector3(0, 0.8f, 14f), Quaternion.identity);
+        if (other.gameObject.tag == "Player")
+        {
+            Instantiate(ghost, new Vector3(14f, 0.8f, 0), Quaternion.identity);
+            //Instantiate(ghost, new Vector3(-14f, 0.8f, 0), Quaternion.identity);
+            //Instantiate(ghost, new Vector3(0, 0.8f, 14f), Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

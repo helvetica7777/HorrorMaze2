@@ -6,11 +6,13 @@ using UnityEngine.AI;
 public class AgentWalkScript : MonoBehaviour
 {
     public Transform destination;
-    public GameObject youdie;
+    //public GameObject youdie;
     private NavMeshAgent agent;
 
     void Start()
     {
+        destination = GameObject.FindWithTag("Player").transform;
+
         agent = gameObject.GetComponent<NavMeshAgent>();
 
     }
@@ -24,14 +26,14 @@ public class AgentWalkScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameOver();
+            agent.Stop(true);
         }
     }
 
-    [System.Obsolete]
-    public void GameOver()
-    {
-        agent.Stop(true);
-        youdie.SetActive(true);
-    }
+    //[System.Obsolete]
+    //public void GameOver()
+    //{
+    //    agent.Stop(true);
+    //    youdie.SetActive(true);
+    //}
 }
