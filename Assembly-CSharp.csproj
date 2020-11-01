@@ -74,7 +74,9 @@
     <Compile Include="Assets\MonsterRange.cs" />
     <Compile Include="Assets\MouseCamLook.cs" />
     <Compile Include="Assets\Scripts\AgentWalkScript.cs" />
+    <Compile Include="Assets\Scripts\Arrow.cs" />
     <Compile Include="Assets\Scripts\DoorStatus.cs" />
+    <Compile Include="Assets\Scripts\GhostDestroyer.cs" />
     <Compile Include="Assets\Scripts\GhostGenerator.cs" />
     <Compile Include="Assets\Scripts\OpenDoors.cs" />
     <Compile Include="Assets\Scripts\QTEController.cs" />
