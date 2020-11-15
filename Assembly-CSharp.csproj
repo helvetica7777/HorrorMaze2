@@ -71,6 +71,8 @@
     <Compile Include="Assets\First person controller\Components\Zoom.cs" />
     <Compile Include="Assets\First person controller\FirstPersonLook.cs" />
     <Compile Include="Assets\First person controller\FirstPersonMovement.cs" />
+    <Compile Include="Assets\Materials\shader\baseEffect.cs" />
+    <Compile Include="Assets\Materials\shader\bloom.cs" />
     <Compile Include="Assets\MonsterRange.cs" />
     <Compile Include="Assets\MouseCamLook.cs" />
     <Compile Include="Assets\Scripts\AgentWalkScript.cs" />
@@ -82,7 +84,8 @@
     <Compile Include="Assets\Scripts\QTEController.cs" />
     <Compile Include="Assets\Scripts\QTERange.cs" />
     <Compile Include="Assets\ghostBehavior.cs" />
-    <None Include="Assets\Scripts\NewSurfaceShader.shader" />
+    <None Include="Assets\Materials\shader\EmissionLight.shader" />
+    <None Include="Assets\Materials\shader\bloom.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:/UnityProgram/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
