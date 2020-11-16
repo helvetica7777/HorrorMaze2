@@ -209,7 +209,7 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
-    - _GlossMapScale: 0.913
+    - _GlossMapScale: 0.767
     - _Glossiness: 0.27
     - _GlossyReflections: 1
     - _HeightAmplitude: 0.0001
