@@ -26,7 +26,7 @@ public class Arrow : MonoBehaviour
         HitsWall = 0;
         //transform.position = new Vector3(0, 0, -7);
 
-        gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
         gameObject.GetComponent<Rigidbody>().useGravity = false;
 
@@ -54,7 +54,7 @@ public class Arrow : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
 
             {
-
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 IsFly = 1;
                 time = 0;
                 this.transform.parent = null;
@@ -90,7 +90,7 @@ public class Arrow : MonoBehaviour
 
                 {
 
-                    rigid.AddRelativeForce(new Vector3(0, 1, 8));
+                    rigid.AddRelativeForce(new Vector3(0, 4, 10));
 
                 }
 

@@ -19,7 +19,7 @@ public class GhostGenerator : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Instantiate(ghost, new Vector3(14f, 0.8f, 0), Quaternion.identity);
+            Instantiate(ghost, new Vector3(0, 0, 38.6f), Quaternion.identity);
             //Instantiate(ghost, new Vector3(-14f, 0.8f, 0), Quaternion.identity);
             //Instantiate(ghost, new Vector3(0, 0.8f, 14f), Quaternion.identity);
             Destroy(gameObject);

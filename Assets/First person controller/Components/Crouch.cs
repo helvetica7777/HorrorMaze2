@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Crouch : MonoBehaviour
 {
-    public float crouchYLocalPosition = 1;
+    public float crouchYLocalPosition;
     public Transform head;
     [HideInInspector]
     public float defaultHeadYLocalPosition;

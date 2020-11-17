@@ -6,13 +6,22 @@ using UnityEngine.AI;
 
 public class GhostDestroyer : MonoBehaviour
 {
-
+    private void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
+    private Animator anim;
+    [System.Obsolete]
     void OnCollisionEnter(Collision collider)
     {
-        if (collider.gameObject.name == "Candle")
+        if (collider.gameObject.name == "knife")
         {
-            gameObject.GetComponent<NavMeshAgent>().speed = 0;
+            gameObject.GetComponent<NavMeshAgent>().Stop(true);
             gameObject.GetComponent<AudioSource>().Play();
+            
+            gameObject.GetComponent<AgentWalkScript>().alive = false;
+            anim.Play("killed");
+
             Destroy(gameObject,1.5f);
             Destroy(collider.gameObject, 0.5f);
         }
