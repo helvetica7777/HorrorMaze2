@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AgentWalkScript : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class AgentWalkScript : MonoBehaviour
         {
             anim.Play("flying");
         }
-        
+        //transform.LookAt(destination);
         gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, Quaternion.LookRotation(destination.position - gameObject.transform.position), (2.0f) * Time.deltaTime);
         agent.SetDestination(destination.position);
     }
@@ -41,6 +42,7 @@ public class AgentWalkScript : MonoBehaviour
             anim.Play("scare");
             agent.Stop(true);
             youdie.text="You died";
+            SceneManager.LoadScene("end");
         }
     }
 

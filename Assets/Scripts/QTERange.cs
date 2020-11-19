@@ -4,7 +4,7 @@ using System.Security.Permissions;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.SceneManagement;
 public class QTERange : MonoBehaviour
 {
     public GameObject QTECanvas;
@@ -12,7 +12,6 @@ public class QTERange : MonoBehaviour
     public Transform target;
     public Transform monster;
     public LayerMask obstacleMask;
-    public GameObject die;
 
     void Start()
     {
@@ -20,7 +19,6 @@ public class QTERange : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         target = player.transform;
         monster = gameObject.transform;
-        die = QTECanvas.transform.GetChild(1).gameObject;
     }
     void Update()
     {
@@ -30,17 +28,15 @@ public class QTERange : MonoBehaviour
             if (qteController.allpass == 1)
             {
                 QTECanvas.transform.GetChild(0).gameObject.SetActive(false);
-                Destroy(gameObject.transform.parent.gameObject);
+                Destroy(gameObject);
                 player.GetComponent<OpenDoors>().enabled = true;
                 player.GetComponent<FirstPersonMovement>().enabled = true;
                 player.GetComponent<Crouch>().enabled = true;
-                player.transform.Find("First person camera").GetComponent<FirstPersonLook>().enabled = true;
+                player.transform.Find("camera").GetComponent<FirstPersonLook>().enabled = true;
             }
             else if (qteController.allpass == 2)
             {
-                QTECanvas.transform.GetChild(0).gameObject.SetActive(false);
-                die.SetActive(true);
-                gameObject.transform.parent.GetComponent<NavMeshAgent>().speed = 2f;
+                SceneManager.LoadScene("end");
             }
         }
     }
@@ -52,11 +48,11 @@ public class QTERange : MonoBehaviour
             if (checkVisibility())
             {
                 QTECanvas.transform.GetChild(0).gameObject.SetActive(true);
-                gameObject.transform.parent.GetComponent<NavMeshAgent>().speed = 0.05f;
+                gameObject.transform.GetComponent<NavMeshAgent>().speed = 0.8f;
                 player.GetComponent<OpenDoors>().enabled = false;
                 player.GetComponent<FirstPersonMovement>().enabled = false;
                 player.GetComponent<Crouch>().enabled = false;
-                player.transform.Find("First person camera").GetComponent<FirstPersonLook>().enabled = false;
+                player.transform.Find("camera").GetComponent<FirstPersonLook>().enabled = false;
 
             }
         }

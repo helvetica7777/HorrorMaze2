@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 495210576006944998}
   m_Layer: 0
   m_Name: knife_pickable
-  m_TagString: Untagged
+  m_TagString: knife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,6 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7608a614a6a83543b04bc3e31282ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &6938978072079164075
 PrefabInstance:
   m_ObjectHideFlags: 0

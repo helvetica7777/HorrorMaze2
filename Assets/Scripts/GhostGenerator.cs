@@ -5,9 +5,13 @@ using UnityEngine;
 public class GhostGenerator : MonoBehaviour
 {
     public GameObject ghost;
+    public GameObject bgm1;
+    public Vector3 position;
+    AudioSource bgm;
     // Start is called before the first frame update
     void Start()
     {
+        bgm = bgm1.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,7 +23,8 @@ public class GhostGenerator : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Instantiate(ghost, new Vector3(0, 0, 38.6f), Quaternion.identity);
+            Instantiate(ghost, position, Quaternion.identity);
+            bgm.Play();
             //Instantiate(ghost, new Vector3(-14f, 0.8f, 0), Quaternion.identity);
             //Instantiate(ghost, new Vector3(0, 0.8f, 14f), Quaternion.identity);
             Destroy(gameObject);

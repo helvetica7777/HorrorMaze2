@@ -80,9 +80,12 @@
     <Compile Include="Assets\Scripts\DoorStatus.cs" />
     <Compile Include="Assets\Scripts\GhostDestroyer.cs" />
     <Compile Include="Assets\Scripts\GhostGenerator.cs" />
+    <Compile Include="Assets\Scripts\LoadScene.cs" />
     <Compile Include="Assets\Scripts\OpenDoors.cs" />
     <Compile Include="Assets\Scripts\QTEController.cs" />
     <Compile Include="Assets\Scripts\QTERange.cs" />
+    <Compile Include="Assets\Scripts\items.cs" />
+    <Compile Include="Assets\Scripts\pickup.cs" />
     <Compile Include="Assets\ghostBehavior.cs" />
     <None Include="Assets\Materials\shader\EmissionLight.shader" />
     <None Include="Assets\Materials\shader\bloom.shader" />

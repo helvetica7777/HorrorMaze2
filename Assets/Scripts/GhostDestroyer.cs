@@ -11,19 +11,19 @@ public class GhostDestroyer : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
     }
     private Animator anim;
+
     [System.Obsolete]
-    void OnCollisionEnter(Collision collider)
+    private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.name == "knife")
         {
+            gameObject.GetComponent<AgentWalkScript>().alive = false;
             gameObject.GetComponent<NavMeshAgent>().Stop(true);
             gameObject.GetComponent<AudioSource>().Play();
-            
-            gameObject.GetComponent<AgentWalkScript>().alive = false;
             anim.Play("killed");
 
             Destroy(gameObject,1.5f);
-            Destroy(collider.gameObject, 0.5f);
+
         }
     }
 }
