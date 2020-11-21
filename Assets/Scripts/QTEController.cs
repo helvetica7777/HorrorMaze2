@@ -20,6 +20,9 @@ public class QTEController : MonoBehaviour
 
     void Start()
     {
+        //QTECanvas = GameObject.Find("QTE Canvas");
+        //DisplayBox = QTECanvas.transform.GetChild(2).gameObject;
+        //PassBox = QTECanvas.transform.GetChild(3).gameObject;
         waitingforkey = 0;
         number = 0;
         allpass = 0;

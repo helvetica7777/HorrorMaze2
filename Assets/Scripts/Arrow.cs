@@ -9,11 +9,12 @@ public class Arrow : MonoBehaviour
     private int IsFly;
     private int HitsWall;
     private float time;
+    public GameObject prefab;
+    public GameObject player;
 
     private void Start()
 
     {
-
         Init();
 
     }
@@ -26,9 +27,10 @@ public class Arrow : MonoBehaviour
         HitsWall = 0;
         //transform.position = new Vector3(0, 0, -7);
 
-        gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
         gameObject.GetComponent<Rigidbody>().useGravity = false;
+        player = GameObject.Find("/Player/camera");
 
     }
 
@@ -54,11 +56,12 @@ public class Arrow : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
 
             {
-
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 IsFly = 1;
                 time = 0;
-                this.transform.parent = null;
-
+                this.transform.parent = null;              
+                player.GetComponent<items>().knives -= 1;
+                Destroy(gameObject, 1.5f);
             }
 
         }
@@ -90,7 +93,7 @@ public class Arrow : MonoBehaviour
 
                 {
 
-                    rigid.AddRelativeForce(new Vector3(0, 1, 8));
+                    rigid.AddRelativeForce(new Vector3(0, 4, 10));
 
                 }
 

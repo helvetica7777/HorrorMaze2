@@ -39,12 +39,12 @@ public class OpenDoors : MonoBehaviour
     {
         if (collision.gameObject.tag == "door")
         {
-            hint.SetActive(true);
-            _hint = true;
             _double = true;
             ds = collision.gameObject.transform.parent.parent.GetComponent<DoorStatus>();
             if (ds.canopen == true)
             {
+                hint.SetActive(true);
+                _hint = true;
                 _canopen = true;
             }
             else
@@ -56,12 +56,12 @@ public class OpenDoors : MonoBehaviour
         }
         else if (collision.gameObject.tag == "door1")
         {
-            hint.SetActive(true);
-            _hint = true;
             _double = false;
             ds = collision.gameObject.transform.parent.parent.GetComponent<DoorStatus>();
             if (ds.canopen == true)
             {
+                hint.SetActive(true);
+                _hint = true;
                 _canopen = true;
             }
             else
